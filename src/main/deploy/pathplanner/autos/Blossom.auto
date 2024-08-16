@@ -1,0 +1,55 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.2064433431192452,
+      "y": 5.5430292057165325
+    },
+    "rotation": 0.865865255473327
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "shoot"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "intake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MiddleStep1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MiddleStep2"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "levelIntake"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "shoot"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

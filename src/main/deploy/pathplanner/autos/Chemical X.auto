@@ -1,0 +1,85 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.7139723370355832,
+      "y": 4.543099268016718
+    },
+    "rotation": -55.90186985070371
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "shoot"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "intake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "S-3"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3-S"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "levelIntake"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "shoot"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "intake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "S-7"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "7-S"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "levelIntake"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "shoot"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

@@ -1,0 +1,8 @@
+Autos
+=====
+
+Top: Near-Side, closest to the Amp
+Middle: In the center
+Bottom: Far-Side, closest to the source.
+ShootAndIntake: Shoots, backs up, and intakes
+ShootAndBackUp: Shoots, backs up. Bare minimum.
