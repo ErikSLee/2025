@@ -1,6 +1,6 @@
 # 2025 Swerve base for Milwaukee Robotics Academy
 
-This is based on the YAGSL Library. The project is documented
+This is based on the YAGSL Library. YAGSL is documented
 on [here](https://yagsl.gitbook.io/yagsl). The JSON documentation can also be
 found [here](docs/START.md)
 

@@ -59,18 +59,6 @@ public final class Constants {
 
   }
 
-  public static class ShooterConstants {
-    public static final int kFlywheelMotorPort = 9;
-    public static final int kTriggerMotorPort = 10;
-
-    public static final int kFlywheelLeftMotorPort = 11;
-    public static final int kTriggerLeftMotorPort = 12;
-  }
-
-  public static class IntakeConstants {
-    public static final int kLeftMotorPort = 13;
-    public static final int kRightMotorPort = 14;
-  }
 
   public static class PhotonVisionConstants {
     public static final String kCameraName = "Arducam_OV9281_USB_Camera";
