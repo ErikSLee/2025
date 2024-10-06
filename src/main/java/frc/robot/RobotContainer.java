@@ -40,11 +40,11 @@ public class RobotContainer {
 
   // The robot's subsystems and commands are defined here...
   private final SwerveSubsystem m_drivebase = new SwerveSubsystem(new File(Filesystem.getDeployDirectory(),
-      "maxswerve")); // "swerve" for old 2024 robot.
+      "swerve")); 
 
   // CommandJoystick rotationController = new CommandJoystick(1);
 
-  private final Photonvision m_photonvision = new Photonvision();
+//  private final Photonvision m_photonvision = new Photonvision();
   // CommandJoystick rotationController = new CommandJoystick(1);
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
@@ -107,10 +107,6 @@ public class RobotContainer {
     // Zero the heading of the robot
     driverController.start().onTrue((new InstantCommand(m_drivebase::zeroGyro))); 
     
-
-    driverController.rightBumper().whileTrue(
-        getPOVTurnCommand((int) (Math.round(Math.toDegrees(-m_photonvision.getSpeakerTarget()))))
-            .unless(() -> !m_photonvision.hasSpeakerTarget()));
 
     
     /**
@@ -182,20 +178,20 @@ public class RobotContainer {
     /**
      * Update the drivetrain odometry with vision measurements when we have april tags in our view
      */
-    if (m_photonvision.hasTargets()) {
-      Optional<EstimatedRobotPose> estimatedPose = m_photonvision.getEstimatedGlobalPose(m_drivebase.getPose());
-      if (estimatedPose.isPresent()) {
-        Pose2d robotPose2d = estimatedPose.get().estimatedPose.toPose2d();
-    //    double distance = m_photonvision.getBestTarget().getBestCameraToTarget().getTranslation().getNorm();
-        var estimatedStandardDevs = m_photonvision.getEstimationStdDevs(robotPose2d);
-        m_drivebase.addVisionMeasurement(robotPose2d, estimatedPose.get().timestampSeconds, estimatedStandardDevs); 
+    // if (m_photonvision.hasTargets()) {
+    //   Optional<EstimatedRobotPose> estimatedPose = m_photonvision.getEstimatedGlobalPose(m_drivebase.getPose());
+    //   if (estimatedPose.isPresent()) {
+    //     Pose2d robotPose2d = estimatedPose.get().estimatedPose.toPose2d();
+    // //    double distance = m_photonvision.getBestTarget().getBestCameraToTarget().getTranslation().getNorm();
+    //     var estimatedStandardDevs = m_photonvision.getEstimationStdDevs(robotPose2d);
+    //     m_drivebase.addVisionMeasurement(robotPose2d, estimatedPose.get().timestampSeconds, estimatedStandardDevs); 
 
-        SmartDashboard.putNumber("camera X", (new Pose2d(robotPose2d.getTranslation(),
-            m_drivebase.getHeading()).getX()));
-        SmartDashboard.putNumber("camera Y", (new Pose2d(robotPose2d.getTranslation(),
-            m_drivebase.getHeading()).getY()));
-      }
-    }
+        // SmartDashboard.putNumber("camera X", (new Pose2d(robotPose2d.getTranslation(),
+        //     m_drivebase.getHeading()).getX()));
+        // SmartDashboard.putNumber("camera Y", (new Pose2d(robotPose2d.getTranslation(),
+        //     m_drivebase.getHeading()).getY()));
+    //  }
+    // }
   }
 
 }
