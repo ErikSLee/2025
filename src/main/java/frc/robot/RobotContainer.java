@@ -161,11 +161,12 @@ public class RobotContainer {
    */
   public void setDriveMode() {
     Optional<Alliance> alliance = DriverStation.getAlliance();
-    if (alliance.isPresent() && alliance.get() == Alliance.Red) {
-      m_drivebase.setLastAngleScalar(180); // DEFAULT
-    } else {
-      m_drivebase.setLastAngleScalar(0); // DEFAULT
-    }
+    // TODO: fix for driverstation
+    // if (alliance.isPresent() && alliance.get() == Alliance.Red) {
+    //   m_drivebase.setLastAngleScalar(180); // DEFAULT
+    // } else {
+    //   m_drivebase.setLastAngleScalar(0); // DEFAULT
+    // }
     // drivebase.setDefaultCommand();
   }
 

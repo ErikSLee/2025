@@ -139,7 +139,6 @@ $RECYCLE.BIN/
 .gradle
 /build/
 
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -170,6 +169,8 @@ out/
 .fleet
 
 # Simulation GUI and other tools window save file
+networktables.json
+simgui.json
 *-window.json
 
 # Simulation data log directory
@@ -178,6 +179,6 @@ logs/
 # Folder that has CTRE Phoenix Sim device config storage
 ctre_sim/
 
-*.lock
-*.probe
-*.bin
+# clangd
+/.cache
+compile_commands.json
